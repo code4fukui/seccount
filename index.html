@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"><!-- default / black / black-translucent -->
+<link rel="apple-touch-icon" href="./seccount-icon.jpg">
+<meta property="og:image" content="./seccount.jpg">
+<title>びょうかぞえ</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+</head><body>
+<main id=main></main>
+<script type="module">
+let t0 = performance.now();
+let active = false;
+const draw = () => {
+  if (active) requestAnimationFrame(draw);
+  const t = Math.floor((performance.now() - t0) / 1000);
+  main.textContent = t;
+  const len = Math.max(2, t.toString().length);
+  main.style.fontSize = (100 / len * 2) * 1.2 + "vmin";
+};
+draw();
+main.onclick = () => {
+  active = !active;
+  if (active) {
+    t0 = performance.now();
+    draw();
+  }
+  main.className = active ? "white" : "black";
+};
+main.className = "black";
+</script>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+main {
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  font-family: "Courier Prime", monospace;
+  font-optical-sizing: auto;
+  line-height: 100dvh;
+  text-align: center;
+}
+.white {
+  color: black;
+  background-color: white;
+}
+.black {
+  color: white;
+  background-color: black;
+}
+</style>
+</body></html>
