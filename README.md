@@ -1,19 +1,21 @@
-# seccount - toy series
-日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+# seccount
 
-A simple seconds counter web application.
+びょうかぞえ
 
-## Demo
-https://code4fukui.github.io/seccount/
+**Live demo**: https://code4fukui.github.io/seccount/
 
-## Features
-- Displays the number of seconds since the page was loaded
-- Allows user to start/stop the counter by clicking on the screen
-- Font size automatically adjusts to the number of digits
+## Technology Stack
 
-## Usage
-1. Open the [demo page](https://code4fukui.github.io/seccount/) in a web browser.
-2. Click on the screen to start/stop the counter.
+
+## Installation & Setup
+
+No build step required. Clone the repository and open `index.html` in a browser,
+or visit the live demo at https://code4fukui.github.io/seccount/
+
+## Contributing
+
+Contributions are welcome. Please open an issue or pull request on GitHub.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+
+MIT License. See [LICENSE](./LICENSE) for details.
